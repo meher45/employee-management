@@ -1,0 +1,95 @@
+<div>
+    <div class="container">
+        <input type="radio" class="btn-check" name="templete" id="option5" value="allEmployee" autocomplete="off"
+            [(ngModel)]="templete" (click)="show()">
+        <label class="btn btn-outline-primary" for="option5">Empose Salary</label>
+
+        <input type="radio" class="btn-check" name="templete" id="option6" value="attendanceReport" autocomplete="off"
+            [(ngModel)]="templete">
+        <label class="btn btn-outline-success ms-2" for="option6">Salary Report</label>
+    </div>
+    <ng-template [ngIf]="templete=='allEmployee'">
+        <div>
+            <div class="row">
+                <!-- <div class="col-sm-2">
+                    <div class="my-3">
+
+                        <input type="date" class="form-control" id="exampleInputEmail1" name="attendanceDate"
+                            [(ngModel)]="attendanceDate">
+                    </div>
+                </div> -->
+            </div>
+            <div class="my-5">
+                <input type="radio" class="btn-check" name="month" id="1" autocomplete="off" value="Jan" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="1">Jan</label>
+
+                <input type="radio" class="btn-check" name="month" id="2" autocomplete="off" value="Feb" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="2">Feb</label>
+
+                <input type="radio" class="btn-check" name="month" id="3" autocomplete="off" value="Mar" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="3">Mar</label>
+
+                <input type="radio" class="btn-check" name="month" id="4" autocomplete="off" value="Apr" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="4">Apr</label>
+
+                <input type="radio" class="btn-check" name="month" id="5" autocomplete="off" value="May" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="5">May</label>
+
+                <input type="radio" class="btn-check" name="month" id="6" autocomplete="off" value="Jun" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="6">Jun</label>
+
+                <input type="radio" class="btn-check" name="month" id="7" autocomplete="off" value="Jul" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="7">Jul</label>
+
+                <input type="radio" class="btn-check" name="month" id="8" autocomplete="off" value="Aug" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="8">Aug</label>
+
+                <input type="radio" class="btn-check" name="month" id="9" autocomplete="off"  value="Sep" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="9">Sep</label>
+
+                <input type="radio" class="btn-check" name="month" id="10" autocomplete="off" value="Oct" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="10">Oct</label>
+
+                <input type="radio" class="btn-check" name="month" id="11" autocomplete="off" value="Nov" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="11">Nov</label>
+
+                <input type="radio" class="btn-check" name="month" id="12" autocomplete="off" value="Dec" [(ngModel)]="month">
+                <label class="btn btn-outline-success me-2" for="12">Dec</label>
+            </div>
+            {{month}}
+        </div>
+    </ng-template>
+    <!-- <ng-template [ngIf]="templete=='attendanceReport'">
+          <form (ngSubmit)="report()">
+            <div class="row">
+              <div class="mb-3 col-sm-2">
+                <label for="startDate" class="form-label">Start Date</label>
+                <input type="date" class="form-control" id="startDate" name="startDate" [(ngModel)]="startDate">
+              </div>
+              <div class="mb-3 col-sm-2">
+                <label for="endDate" class="form-label">End Date</label>
+                <input type="date" class="form-control" id="endDate" name="endDate" [(ngModel)]="endDate">
+              </div>
+              <button type="submit" class="btn btn-primary col-sm-2">Submit</button>
+            </div>
+            </form>
+            <table class="table">
+              <thead>
+                    <tr>
+                      <th scope="col">Employee Id</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Attendance Status</th>
+                      
+                    </tr>
+                  </thead>
+              <tbody>
+                <tr *ngFor="let i of attendanceReport">
+                  <th scope="row">{{i.employeeId}}</th>
+                  <td> {{i.date}} </td>
+                  <td> {{i.status}} </td>
+                </tr>
+              </tbody>
+            </table>
+  
+      </ng-template> -->
+</div>
